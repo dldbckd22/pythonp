@@ -15,4 +15,4 @@ s7='''p
         y'''
 head=3
 tail=' is fun'
-print(head+tail)
+tiaklqw
