@@ -16,3 +16,4 @@ s7='''p
 head=3
 tail=' is fun'
 tiaklqw
+wqrqwrqwrqwr
