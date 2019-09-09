@@ -1,4 +1,4 @@
-import random,time
+import functionM.py as fm
 
 w=["cat","dog","fox","monkey","mouse","panda","frog","snake","wolf"]
 
