@@ -1,10 +1,12 @@
-import functionM.py as fm
+import gameFunction as gF
 
 w=["cat","dog","fox","monkey","mouse","panda","frog","snake","wolf"]
-
+rank={}
+r=rank
 with open('./quiz/rank.pkl','rb') as f:
    rank=pickle.load(f)
 
+      
 while True:
    print('''
        1.문제불러오기 
@@ -16,6 +18,10 @@ while True:
        7.종료하기''')
    menu = input("메뉴를 선택하세요\n")
    if menu=='1':
+      
+      
+      
+      '''
       f=open('./quiz/word.txt','r',encoding='utf8')
       lines=f.readlines()
       for i in range(len(lines)):
@@ -24,16 +30,8 @@ while True:
       print(w)
       f.close()
       '''
-      f=open('./quiz/word.txt','r',encoding='utf8')
-      line = 1
-      while line:
-         line = f.readline().replace("\n","")
-         if not(line==''):
-            w.append(line)
-      print(w)
-      f.close()
-      '''
    elif menu=='2':
+      '''
       quiz=1
       while quiz:
          quiz=input('추가할 단어 입력(종료:0) >> ')
@@ -41,16 +39,23 @@ while True:
             print('입력을 종료합니다.')
             break
          w.append(quiz)
+      
       print(w)
+      '''
    elif menu=='3':
+      '''
       with open('./quiz/pickle.pkl','wb') as f:
          pickle.dump(w,f)
       print(w)   
+      '''
    elif menu=='4':
+      '''
       with open('./quiz/pickle.pkl','rb') as f:
          w=pickle.load(f)
       print(w)   
+      '''
    elif menu=='5':
+      '''
       n=1
       q=random.choice(w)
       input('시작!')
@@ -70,20 +75,22 @@ while True:
       name = input('이름을 입력하세요')
       rank[name]=end-start
       print(rank)
+      '''
    elif menu=='6':
-
+      '''
       ranklist=sorted(rank.items(),key=(lambda x: x[1]))
       print(ranklist)
       cnt=1
       for k,v in ranklist:
          print('{}등 {} 시간:{:.2f}'.format(cnt,k,v)) 
          cnt+=1
-            
+      '''        
    elif menu=='7':
+      '''
       with open('./quiz/rank.pkl','wb') as f:
          pickle.dump(rank,f)
 
       break
-
+      '''
 
 
